@@ -1,4 +1,4 @@
-from mpy_decimal.mpy_decimal import *
+from mpy_decimal.decimal import *
 
 
 def solve_quadratic_equation(a: DecimalNumber, b: DecimalNumber, c: DecimalNumber) -> Tuple[bool, DecimalNumber, DecimalNumber]:

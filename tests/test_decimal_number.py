@@ -1,6 +1,6 @@
 import sys
 import random
-from mpy_decimal.mpy_decimal import *
+from mpy_decimal.decimal import *
 
 if sys.implementation.name == "cpython":
     import traceback
