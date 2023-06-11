@@ -1,0 +1,10 @@
+{
+    "urls": [
+        [
+            "decimal.py",
+            "github:HowManyOliversAreThere/micropython-decimal/mpy_decimal/decimal.py"
+        ]
+    ],
+    "deps": [],
+    "version": "0.1"
+}

@@ -1,4 +1,7 @@
 # Decimal floating point arithmetic for micropython
+
+*Note:* This is a fork of [mpy-devs implementation](https://github.com/mpy-dev/micropython-decimal-number) in order to make it `mip`-installable. The module name has also been simplified to streamline usage (`mpy_decimal` -> `decimal`).
+
 This Python module for [*micropython*](https://micropython.org/) provides support for decimal floating point arithmetic. It tries to overcome the limitations of single precision float numbers (32-bit) and provides a solution when double precision float numbers (64 bit) are not enough.
 
 The Python Standard Library contains the wonderful module [*decimal*](https://docs.python.org/3/library/decimal.html), but it has not been ported to *micropython*. This module provides a small, but valuable, part of the functionality of *decimal*.
