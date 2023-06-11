@@ -92,13 +92,13 @@ All the internal operations of **DecimalNumber** are done with integers (*int* b
 To test this module on a PC, you can start by importing the module:
 
 ```python
-from mpy_decimal.mpy_decimal import *
+from mpy_decimal.decimal import *
 ```
 
-For testing on a Micropython board, you have probably copied the file 'mpy_decimal.py' to the board or a compiled version of it: 'mpy_decimal.mpy'. There is a guide that explains how to compile this module and how to copy it to a device at the end of this document. You can import the module with:
+For testing on a Micropython board, you have probably copied the file 'decimal.py' to the board or a compiled version of it: 'decimal.mpy'. There is a guide that explains how to compile this module and how to copy it to a device at the end of this document. You can import the module with:
 
 ```python
-from mpy_decimal import *
+from decimal import *
 ```
 
 If you need your code to run on both, a computer and a micropython board, you will probably need to run different code depending on the device. You can do it this way:
@@ -456,7 +456,7 @@ This module defines four exceptions:
 This example shows how to use **DecimalNumber** to solve quadratic equations.
 
 ```python
-from mpy_decimal.mpy_decimal import *
+from mpy_decimal.decimal import *
 
 
 def solve_quadratic_equation(a: DecimalNumber, b: DecimalNumber, c: DecimalNumber) -> Tuple[bool, DecimalNumber, DecimalNumber]:
@@ -535,12 +535,12 @@ This is not exactly part of this module, but someone might find it useful.
 
 **".mpy" files**: a micropython board can run ".py" files directly. It compiles them before executing them, and that takes time. It is a good practice to copy to your micropython board a precompiled version, a ".mpy" file.
 
-You can compile the Python file "mpy_decimal.py", that contains all the functionality of **DecimalNumber**, before copying it to your micropython board:
+You can compile the Python file "decimal.py", that contains all the functionality of **DecimalNumber**, before copying it to your micropython board:
 
 ```shell
-python -m mpy_cross mpy_decimal.py
+python -m mpy_cross decimal.py
 ```
 
-It creates the file "mpy_decimal.mpy". You should have **mpy_cross** installed. More information at: [https://pypi.org/project/mpy-cross/](https://pypi.org/project/mpy-cross/)
+It creates the file "decimal.mpy". You should have **mpy_cross** installed. More information at: [https://pypi.org/project/mpy-cross/](https://pypi.org/project/mpy-cross/)
 
 The next step is copying the ".mpy" file to your micropython board. You can copy python source code files with an editor, for example [**Thonny**](https://thonny.org/), but it does not copy (as of today) ".mpy" files. The tool [**mpy-repl-tool[mount]**](https://mpy-repl-tool.readthedocs.io/en/latest/index.html) can help you connect your computer to your micropython board. It also allows to mount your board and use it as any other disk or memory unit of your computer.
